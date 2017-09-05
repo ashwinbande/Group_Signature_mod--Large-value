@@ -1,0 +1,142 @@
+{% extends "Groupsign/base.html" %}
+{% block title %}Welcome to Django{% endblock %}
+{% block head %}Welcome to Django{% endblock %}
+{% block content %}
+
+<div class="col-sm-8 col-md-8 col-md-offset-2">
+    <h2 class="text-success text-center">Secure and Privacy Preserving Group Signature Scheme With Verifier Local Revocation<br></H2>
+    <h3 class="text-center">By<br>Ashwin Bande<br><br> Under the Guidance of : Prof. S. G. Shikalpure </h3><br><br>
+
+    <h3 class="text-justify"><b>Introduction</b></h3>
+    <h4>
+    <p>Group signatures are modern cryptographic signature concept, first proposed by D. Chaum and E. Heyst, providing four types of signature schemes with various properties. Subsequently numerous improved group signature schemes are proposed. According to the Chaum's concept, group signatures are the types of signatures in which only a valid group member can sign a message on behalf of the group. The verifier can verify the validity of the signed message in an only binary result, which is either signature is valid or invalid. And thus conclude that the signed message is from a valid group member or not, but cannot identify the individual group member's identity, who signed the message and thus protecting the anonymity of the group member.
+</p>
+<p>Also if it is required the signed message can be opened, revealing signing member's identity. Several changes proposed to improve this scheme such that the signed message can be publicly verifiable.
+</p>
+<p>There are mainly two types of group signatures schemes which are Static and Dynamic Signature schemes. In Static schemes, the size of the group is fixed and an only fixed members can join the group. The individual keys of the members are computed beforehand. In Dynamic schemes, the size of a group is not fixed and can grow accordingly so variable number of members can join the group at any time after the group is created.
+</p>
+<p>One another important concept about the group signature is revocation of members. The Revocation is the least discussed concept in the group signature literature, mainly because its needs in various scenarios are different and it is hard to implement a practical revocation scheme with efficiency and maintaining the security of the scheme.
+</p>
+<p>The group signatures are mainly required due to the privacy issue of users. Not only the monitoring of user is required but also his privacy must be maintained. The group signature provides the perfect solution to above requirement.
+</p>
+<p>Above peculiarities of group signatures can be used for many specialise application like e-voting and e-bidding and in VANET in which validity of the vehicle must be maintained while keeping the vehicle's identity private. More generally the group signature can be used in organisational structures like a company or government. For example, in a news forum, a journalist as a member of the group can post news story while keeping his identity safe but a reader can verify the news content using its signature as being valid. In some cases, the identity of the journalist can be revealed by authentic opening entity.
+</p>
+        </h4>
+
+    <h3><b>Definition</b></h3>
+    <h4><p>
+    A Group Signature is a type of Digital Signature consist of following five operations:<br></p>
+        <p>
+<b>Setup:</b> This operation produces a group public key and a group private key by taking input parameter l.<br>
+<b>Join:</b> A protocol between Group Manager and an individual, resulting, the individual becoming member of group by obtaining his private key or secret key.<br>
+<b>Sign:</b> An algorithm which produces a signature for given message by taking input message, group's public key and signer's private key.<br>
+<b>Verify:</b> Algorithm which decides whether a given signature is valid or not, by taking input group's public key, message and signature of message.<br>
+<b>Open:</b> An algorithm which by taking input secret opening key and signature, finds the Identity of  signer.<br>
+</p><p>
+A secure group signature scheme must incorporate following properties.</p>
+        <p>
+<i>Correctness:</i> The scheme must produce a signature that can be verified correctly.<br>
+<i>Unforgeability:</i> Only a group member using his secret key can produce a valid signature and no one other than group member can produce valid signature.<br>
+<i>Anonymity:</i> Identity of actual  signer could not be known except to valid opening entity, possessing an opening key.<br>
+<i>Full anonymity:</i> Deciding whether a signature is from an individual member or not, even after knowing his secret key, must be computationally hard.<br>
+<i>Unlinkability:</i> It should be computationally hard to decide that whether two signatures are from same member or not.<br>
+<i>Exculpability:</i> No one including Group Manager and group members can produce a signature which can be traced as other member's signature.<br>
+<i>Traceability:</i> Open Manager having opening key, can identify the individual signer from his signature.<br>
+<i>Coalition resistance:</i> Coalition of group members including group manager cannot produce a valid  signature.<br>
+<i>Revocability:</i> Any member can be removed from the group at any time and signatures of the revoked member must be identified as invalid during verify procedure.<br>
+  </p>  </h4>
+
+    <h3 class="text-center"><b>Raw Output of the algorithm is as follows:</b></h3>
+
+    <p style="word-break: break-all; word-wrap: break-word">
+        P&apos;: 1757132609<br />
+        P : 3514265219<br />
+        Q&apos;: 2818236881<br />
+        Q : 5636473763<br />
+        N : 19808063703116949097<br />
+        N&apos;: 4952015923491552529<br />
+        ######################################################################### <br />
+
+        A : 15451113142422802813<br />
+        A0: 709696735598404270<br />
+        G : 13053282145890771604<br />
+        ######################################################################### <br />
+
+        Y : 14152169404574377262<br />
+        X : 4716669284644715838<br />
+        ######################################################################### <br />
+
+        PUBLIC KEY :<br />
+        N : 19808063703116949097<br />
+        A : 15451113142422802813<br />
+        A0: 709696735598404270<br />
+        Y : 14152169404574377262<br />
+        G : 13053282145890771604<br />
+        ######################################################################### <br />
+        PRIVATE KEY :<br />
+        P&apos;: 1757132609<br />
+        Q&apos;: 2818236881<br />
+        X : 4716669284644715838<br />
+        ######################################################################### <br />
+
+        XXi : 325733549893186388660882577402781774340<br />
+        RRi : 152672968793030815102214810759436700476<br />
+        C1 : 19402801466834106538<br />
+        ######################################################################### <br />
+
+        ALFAi : 666977519614705107218262045777695300883<br />
+        BETAi : 529492054238408662589751879591545812494<br />
+        ######################################################################### <br />
+
+        Xi : 5495242301361010638255885652905315491930<br />
+        C2 : 6237277837839437017<br />
+        ######################################################################### <br />
+
+        Ei : 367359731057007910339181922993624815286461<br />
+        INVE_Ei: 13188358995152031093<br />
+        Ai : 1041124702177389024<br />
+        ######################################################################### <br />
+
+        VERIFIED<br />
+        ######################################################################### <br />
+
+        W : 8996438890471020759<br />
+        T1 : 8898544417975514360<br />
+        T2 : 3422473020352410278<br />
+        T3 : 10528155576427317794<br />
+        ######################################################################### <br />
+
+        R1 : 8488013973119912932265444804431333758877518105654127684941993365407006145645807<br />
+        R2 : 736309707926510061614458796603258818920292030026405058506324785089835931372874<br />
+        R3 : 1087987939795089113290455628770646347401374218414545486942048669201872462042283320089593624870807448<br />
+
+        INV_A: 9984799031428912653<br />
+        INV_Y: 13936642110302174815<br />
+        INV_G: 4323492815637135125<br />
+        D1 : 12822945867866984479<br />
+        D2 : 7550241988233859522<br />
+        D3 : 13433006749875570205<br />
+        ######################################################################### <br />
+
+        String : b&apos;130532821458907716041415216940457437726270969673559840427015451113142422802813889854441797551436034224730203524102781052815557642731779412822945867866984479755024198823385952213433006749875570205THIS IS MESSEGE&apos;<br />
+        HASH : 3274858703<br />
+        ######################################################################### <br />
+
+        S1 8488013973119912932265444804369404257381134392700505453940711162057968024931356<br />
+        S2 736309707926510061614458796603092703577201769832844864313289129111575059031172<br />
+        S3 1087987939795089113290455628759823170687056452629553079876898658576455787187446634202850126240804451<br />
+        ######################################################################### <br />
+
+        D1_Cal : 12822945867866984479<br />
+        D2_Cal : 7550241988233859522<br />
+        D3_Cal : 13433006749875570205<br />
+        C_DASH : 3274858703<br />
+
+        Messege verified !<br />
+        ######################################################################### <br />
+
+        Ai of user : 1041124702177389024<br />
+</p>
+</div>
+
+{% endblock %}
